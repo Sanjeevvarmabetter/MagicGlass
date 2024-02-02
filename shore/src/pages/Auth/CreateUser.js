@@ -1,6 +1,9 @@
 import React, { useState }  from 'react';
 import auth from '../../firebase.init';
 import {useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import GoogleButton from 'react-google-button';
+import { Link } from 'react-router-dom';
+
 
 const CreateUser = () => {
     const [username, setUserName] = useState('');
@@ -14,6 +17,11 @@ const CreateUser = () => {
         loading,
         error,
     ] = useCreateUserWithEmailAndPassword(auth);
+    
+
+
+    console.log(error)
+    console.log(user)
 
     const handleSubmit = e => {
         e.preventDefault();
@@ -49,6 +57,15 @@ const CreateUser = () => {
                         <button type='submit' className='btn'>Sign up</button>
                     </div>
                 </form>
+                <hr/>
+                <div className='google-button'>
+                    <GoogleButton className='g-btn' type='light'/>
+                </div>
+                <div>
+                    Already have an account?
+                    <Link
+                    to='/login'>login</Link>
+                </div>
             </div>
         </div>
     );

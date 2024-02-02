@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import auth from '../../firebase.init';
 import {useSignInWithEmailAndPassword} from 'react-firebase-hooks/auth';
+import { Link } from 'react-router-dom';
+
+
 const Login = () => {
 
     const [email,setEmail] = useState('');
@@ -14,7 +17,17 @@ const Login = () => {
         error,
     ] = useSignInWithEmailAndPassword(auth);
 
-    console.log(user)
+    if(user){
+        console.log(user);
+    }
+
+    if (error){
+        console.log(error.message)
+    }
+
+    if (loading){
+        console.log("loading....")
+    }
 
     const handleSubmit = e => {
         e.preventDefault();
@@ -39,6 +52,12 @@ const Login = () => {
                     </div>
                 </form>
             </div>
+            <hr></hr>
+            <div>
+                    Don't have an account?
+                    <Link
+                    to='/signup'>signup</Link>
+                </div>
         </div>
     );
 }
