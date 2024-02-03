@@ -1,3 +1,4 @@
+import axios from 'axios';
 import React, { useState } from 'react';
 // import "./styles/userregistrationform.css";
 
@@ -18,9 +19,17 @@ function UserRegistrationForm() {
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Here you can send the form data to your backend server for registration
+
+    try {
+      const respponse = await axios.post('/api/register',formData);
+      console.log(respponse.data);
+      alert("Registraton  successfull");
+    } catch (error) {
+      console.error('Registration failed Pls try again');
+      alert('Registration failed pls try again');
+    }
     console.log(formData);
   };
 
