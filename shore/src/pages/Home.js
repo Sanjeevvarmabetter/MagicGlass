@@ -10,7 +10,7 @@ import FeatureCard from './Components/FeatureCard';
 import VerticalScroll from './Components/VerticalScroll';
 import Login from "./Auth/Login";
 import Signup from "./Auth/CreateUser";
-
+import ContactUs from "./Components/ContactUs";
 const Home = () => {
     const [showModal, setShowModal] = useState(false);
 
@@ -25,12 +25,8 @@ const Home = () => {
                 <h1>Welcome to Our Website</h1>
                 <p>Explore and Discover Amazing Things</p>
             </header>
-
-
-            {/* <section className="mt-5 text-center">
-                <p>Call to Action Section</p>
-                <button className="btn btn-primary">Get Started</button>
-            </section> */}
+            <ContactUs/>
+            <VerticalScroll/>
         </div>
     );
 };

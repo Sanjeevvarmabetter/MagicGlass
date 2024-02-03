@@ -29,7 +29,7 @@ function UserRegistrationForm() {
     } catch (error) {
       console.error('Registration failed Pls try again');
       alert('Registration failed pls try again');
-    }//
+    }//endpoint
     console.log(formData);
   };
 

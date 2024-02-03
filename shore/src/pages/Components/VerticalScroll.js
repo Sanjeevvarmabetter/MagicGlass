@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Modal, Button } from 'react-bootstrap';
-
+import Registration from '../Registration';
 const VerticallyCenteredScrollableModal = () => {
   const [showModal, setShowModal] = useState(false);
 
@@ -22,14 +22,8 @@ const VerticallyCenteredScrollableModal = () => {
           <Modal.Title>Modal Title</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          {/* Add your scrollable content here */}
-          <p>Some long content goes here...</p>
+          <Registration />
         </Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
-            Close
-          </Button>
-        </Modal.Footer>
       </Modal>
     </>
   );
