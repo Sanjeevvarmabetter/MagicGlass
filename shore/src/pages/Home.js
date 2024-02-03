@@ -18,15 +18,13 @@ const Home = () => {
     const handleClose = () => setShowModal(false);
     return (
 
-        <div className="container">
+        <div className="containers">
             <NavigationBar />
-
-            <header className="mt-5 text-center">
-                <h1>Welcome to Our Website</h1>
-                <p>Explore and Discover Amazing Things</p>
-            </header>
-            <ContactUs/>
-            <VerticalScroll/>
+            <div className="home-con">
+                <CarouselCom />
+                <FeatureCard />
+                <VerticalScroll />
+            </div>
         </div>
     );
 };

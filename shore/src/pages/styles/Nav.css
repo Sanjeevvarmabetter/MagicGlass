@@ -65,7 +65,7 @@ a {
 
 /*=============== HEADER ===============*/
 .header {
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   width: 100%;
@@ -243,6 +243,7 @@ a {
 .dropdown__sublink {
   background-color: var(--black-color-lighten);
 }
+
 
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
