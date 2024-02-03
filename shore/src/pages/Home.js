@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import './styles/home.css'
@@ -16,6 +17,10 @@ const Home = () => {
 
     const handleShow = () => setShowModal(true);
     const handleClose = () => setShowModal(false);
+=======
+import React, { useState } from 'react';
+function Home() {
+>>>>>>> 56ac35ed79d7d949f14377edc1ba9826377d0f33
     return (
 
         <div className="container">
@@ -46,3 +51,8 @@ const Home = () => {
 };
 
 export default Home;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 56ac35ed79d7d949f14377edc1ba9826377d0f33
