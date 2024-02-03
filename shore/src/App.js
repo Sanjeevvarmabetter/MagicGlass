@@ -6,6 +6,8 @@ import CreateUser from './pages/Auth/CreateUser';
 import ProfilePage from './pages/Profile';
 import RegistrationForm from './pages/Registration';
 import PlayerRanking from './pages/Rankings/Playerrank';
+import SimpleMap from "./pages/Components/Map";
+
 function App() {
   return (
     <div className="App">
@@ -17,12 +19,12 @@ function App() {
           <Route path='/profile' element={<ProfilePage />}></Route>
           <Route path='/registration' element={<RegistrationForm />}></Route>
           <Route path='/rank' element={<PlayerRanking />}></Route>
+          <Route path='/map' element={<SimpleMap/>}></Route>
         </Routes>
       </BrowserRouter>
-    </div>
+  </div>
   );
-}
+};
 
 export default App;
-
 
