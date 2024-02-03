@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import './styles/home.css'
 
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import NavigationBar from './Components/NavBar';
 import CarouselCom from './Components/CarouselCom';
 import ModelCom from './Components/ModelCom';
@@ -24,6 +24,7 @@ const Home = () => {
                 <CarouselCom />
                 <FeatureCard />
                 <VerticalScroll />
+                <Link to='/rank'>Rank</Link>
             </div>
         </div>
     );
