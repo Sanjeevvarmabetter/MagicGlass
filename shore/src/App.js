@@ -4,7 +4,9 @@ import Home from './pages/Home';
 import Login from './pages/Auth/Login';
 import CreateUser from './pages/Auth/CreateUser';
 import ProfilePage from './pages/Profile';
+
 import RegistrationForm from './pages/Registration';
+import PlayerRanking from './pages/Rankings/Playerrank';
 function App() {
   return (
     <div className="App">
@@ -15,6 +17,7 @@ function App() {
           <Route path='/signup' element={<CreateUser/>}/>
           <Route path='/profile' element={<ProfilePage />}></Route>
           <Route path='/registration' element={<RegistrationForm />}></Route>
+          <Route path='/playerrank' element={<PlayerRanking />}></Route>
         </Routes>
       </BrowserRouter>
     </div>
