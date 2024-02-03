@@ -21,18 +21,44 @@ const EsportData = () => {
         fetchData();
     }, []);
 
-    // Render Esport data
+    const cardStyle = {
+        border: '1px solid #ccc',
+        borderRadius: '5px',
+        boxShadow: '0 2px 4px rgba(0,0,0,0.1)',
+        padding: '20px',
+        margin: '20px',
+        backgroundColor: '#808080',
+    };
+
+    const tableStyle = {
+        width: '100%',
+        borderCollapse: 'collapse',
+        marginTop: '20px',
+    };
+
+    const thStyle = {
+        backgroundColor: '#f2f2f2',
+        padding: '10px',
+        textAlign: 'left',
+        borderBottom: '1px solid #ddd',
+    };
+
+    const tdStyle = {
+        padding: '10px',
+        borderBottom: '1px solid #ddd',
+    };
+
     return (
-        <div>
+        <div style={cardStyle}>
             <h2 style={{ color: "#000" }}>Esport Data</h2>
-            <table>
+            <table style={tableStyle}>
                 <tbody>
                     {esportData.map((row, index) => (
                         <tr key={index}>
-                            <td>{row[0]}</td>
-                            <td>{row[1]}</td>
-                            <td>{row[2]}</td>
-                            <td>{row[3]}</td>
+                            <td style={tdStyle}>{row[0]}</td>
+                            <td style={tdStyle}>{row[1]}</td>
+                            <td style={tdStyle}>{row[2]}</td>
+                            <td style={tdStyle}>{row[3]}</td>
                             {/* Add more cells based on your sheet structure */}
                         </tr>
                     ))}
