@@ -45,13 +45,6 @@ const Login = () => {
                         <button type='submit' className='btn'>Login</button>
                     </form>
                 </div>
-                {submitted && ( // Render card with username and password if form is submitted
-                    <div className='card'>
-                        <h3>Entered Details:</h3>
-                        <p><strong>Email:</strong> {email}</p>
-                        <p><strong>Password:</strong> {password}</p>
-                    </div>
-                )}
                 {error && <div className='error-message'>{error.message}</div>}
 
                 <div className='no-account'>

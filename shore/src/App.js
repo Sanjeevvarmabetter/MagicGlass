@@ -9,23 +9,30 @@ import PlayerRanking from './pages/Rankings/Playerrank';
 import SimpleMap from "./pages/Components/Map";
 import ProtectedRoute from "./ProtectedRoute";
 import { UserAuthContextProvider } from './UserAuthContext';
-
+import Esports from './pages/Esports';
+import Sports from './pages/Sports';
+import Hackathon from './pages/Hackathon';
 function App() {
+  
   return (
     <div className="App">
       <UserAuthContextProvider>
         <BrowserRouter>
           <Routes>
-            <Route path="/" element={<ProtectedRoute> <Home /></ProtectedRoute>} />
-            <Route path="/rank/*" element={<ProtectedRoute> <PlayerRanking /></ProtectedRoute>} />
+            <Route path="/" element={<Home />} />
+            <Route path="/rank/*" element={<PlayerRanking />} />
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<CreateUser />} />
             <Route path="/registration" element={<RegistrationForm />} />
             <Route path="/profile" element={<ProfilePage />} />
             <Route path="/map" element={<SimpleMap />} />
+            <Route path="/esport" element={<Esports/>} />
+            <Route path="/sport" element={<Sports/>} />
+            <Route path="/hackathon" element={<Hackathon />} />
           </Routes>
         </BrowserRouter>
       </UserAuthContextProvider>
+      
     </div>
   );
 }

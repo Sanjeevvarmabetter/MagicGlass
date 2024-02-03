@@ -8,11 +8,9 @@ const firebaseConfig = {
   projectId: "shorehackthon",
   storageBucket: "shorehackthon.appspot.com",
   messagingSenderId: "125070930407",
-  appId: "1:125070930407:web:d4f9e2c99ce9e5f8c88d42",
-  measurementId: "G-38MZZH20J5"
+  appId: "1:125070930407:web:d4f9e2c99ce9e5f8c88d42"
 };
 
-// Initialize Firebase
 const app = initializeApp(firebaseConfig);
 // const analytics = getAnalytics(app);
 

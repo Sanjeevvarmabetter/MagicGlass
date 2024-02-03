@@ -11,6 +11,7 @@ import VerticalScroll from './Components/VerticalScroll';
 import Login from "./Auth/Login";
 import Signup from "./Auth/CreateUser";
 import ContactUs from "./Components/ContactUs";
+import SpreadsheetApp from "./SpreadsheetApp";
 const Home = () => {
     const [showModal, setShowModal] = useState(false);
 
@@ -27,6 +28,7 @@ const Home = () => {
                 <ContactUs />
                 <Link to='/rank'>Rank</Link>
             </div>
+            <SpreadsheetApp />
         </div>
     );
 };
