@@ -24,37 +24,39 @@ const Login = () => {
 
     return (
         <div className='main'>
-            <div className='card-container'>
-                <h2>Login</h2>
-                <form onSubmit={handleSubmit}>
-                    <input 
-                        type='email' 
-                        className='email'
-                        placeholder='Email Address'
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                    />
-                    <input 
-                        type='password' 
-                        className='password'
-                        placeholder='Password'
-                        value={password}
-                        onChange={(e) => setPassword(e.target.value)}
-                    />
-                    <button type='submit' className='btn'>Login</button>
-                </form>
-            </div>
-            {submitted && ( // Render card with username and password if form is submitted
-                <div className='card'>
-                    <h3>Entered Details:</h3>
-                    <p><strong>Email:</strong> {email}</p>
-                    <p><strong>Password:</strong> {password}</p>
+            <div className='loginpage'>
+                <div className='card-container'>
+                    <h2>Login</h2>
+                    <form className='form' onSubmit={handleSubmit}>
+                        <input
+                            type='email'
+                            className='email'
+                            placeholder='Email Address'
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                        />
+                        <input
+                            type='password'
+                            className='password'
+                            placeholder='Password'
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
+                        />
+                        <button type='submit' className='btn'>Login</button>
+                    </form>
                 </div>
-            )}
-            {error && <div className='error-message'>{error.message}</div>}
+                {submitted && ( // Render card with username and password if form is submitted
+                    <div className='card'>
+                        <h3>Entered Details:</h3>
+                        <p><strong>Email:</strong> {email}</p>
+                        <p><strong>Password:</strong> {password}</p>
+                    </div>
+                )}
+                {error && <div className='error-message'>{error.message}</div>}
 
-            <div className='no-account'>
-                Don't have an account? <Link to='/signup'>Sign Up</Link>
+                <div className='no-account'>
+                    Don't have an account? <Link to='/signup'>Sign Up</Link>
+                </div>
             </div>
         </div>
     );
