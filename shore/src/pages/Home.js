@@ -29,6 +29,7 @@ const Home = () => {
                 <Link to='/rank'>Rank</Link>
             </div>
             <SpreadsheetApp />
+            <Link to='/loginHost'>Host Login</Link>
         </div>
     );
 };

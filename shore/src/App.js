@@ -13,6 +13,10 @@ import { UserAuthContextProvider } from './UserAuthContext';
 import Esports from './pages/Host/Esports';
 import Sports from './pages/Host/Sports';
 import Hackathon from './pages/Host/Hackathon';
+
+import LoginHost from './pages/Host/HostAuth/HostLogin';
+import SignUpHost from './pages/Host/HostAuth/HostSignup';
+import HostDashBoard from './pages/Host/HostDashBoard';
 function App() {
   
   return (
@@ -27,6 +31,11 @@ function App() {
             <Route path="/registration" element={<RegistrationForm />} />
             <Route path="/profile" element={<ProfilePage />} />
             <Route path="/map" element={<SimpleMap />} />
+
+            <Route path="/loginHost" element={<LoginHost/>}/>
+            <Route path="/signupHost" element={<SignUpHost/>}/>
+            <Route path="/host/dashboard" element={<HostDashBoard/>}/>
+
             <Route path="/esportHost" element={<Esports/>} />
             <Route path="/sportHost" element={<Sports/>} />
             <Route path="/hackathonHost" element={<Hackathon />} />
