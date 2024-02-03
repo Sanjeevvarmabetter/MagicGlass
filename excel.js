@@ -18,15 +18,29 @@ const auth = new google.auth.GoogleAuth({
 const sheets = google.sheets({ version: 'v4', auth });
 
 app.post('/appendData', async (req, res) => {
-  const { sheetId, row, column, data } = req.body;
-  console.log('Received request:', sheetId, row, column, data);
+  const { sheetId, values, sheetName, range } = req.body;
+  console.log('Received request:', sheetId, values);
 
   try {
+    // Find the first empty row in the specified range
+    const response = await sheets.spreadsheets.values.get({
+      spreadsheetId: sheetId,
+      range: range,
+    });
+
+    const valuesRange = response.data.values;
+    let emptyRow = 2; // Start from row 2
+
+    while (emptyRow <= valuesRange.length && valuesRange[emptyRow - 1].some(value => value !== '')) {
+      emptyRow++;
+    }
+
+    // Append data to the found empty row
     await sheets.spreadsheets.values.update({
       spreadsheetId: sheetId,
-      range: `${column}${row}`,
+      range: `${range.charAt(0)}${emptyRow}`,
       valueInputOption: 'RAW',
-      resource: { values: [[data]] },
+      resource: { values: [values] },
     });
 
     res.status(200).json({ success: true });
