@@ -18,7 +18,7 @@ function UserContactUs() {
     e.preventDefault();
 
     try {
-      const response = await axios.post('http://localhost:5000/contactus', formData);
+      const response = await axios.post('http://localhost:5001/contactus', formData);
       console.log(response.data);
       alert("Contactus successful");
     } catch (error) {

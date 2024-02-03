@@ -1,7 +1,6 @@
 const express = require('express');
 const cors = require('cors');
 const bodyparser = require('body-parser');
-const router = require('./routes/router')
 const conrouter = require('./routes/conrouter')
 const mongoose = require('mongoose');
 const app = express()
@@ -16,15 +15,14 @@ const corseOptions = {
 }
 
 const dbOptiosns = {useNewUrlParser:true, useUnifiedTopology:true}
-mongoose.connect('mongodb+srv://shore:shore@cluster0.uubfvtd.mongodb.net/registration',dbOptiosns)
+mongoose.connect('mongodb+srv://shore:shore@cluster0.uubfvtd.mongodb.net/contactus',dbOptiosns)
 .then(() => console.log("DB connected!"))
 .catch(err => console.log(err))
 
 app.use(cors(corseOptions))
 app.use('/',conrouter)
-app.use('/', router)
 
-const PORT = 5000
+const PORT = 5001
 
 
 const server = app.listen(PORT, () => {
