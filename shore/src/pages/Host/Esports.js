@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import NavigationBar from '../Components/NavBar';
 
 function Esports() {
   const [Name, setName] = useState('');
@@ -32,6 +33,7 @@ function Esports() {
 
   return (
     <div>
+        <NavigationBar/>
         <h1>E Sports</h1>
       <label>
         Name:

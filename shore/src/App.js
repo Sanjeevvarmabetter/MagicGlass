@@ -9,9 +9,10 @@ import PlayerRanking from './pages/Rankings/Playerrank';
 import SimpleMap from "./pages/Components/Map";
 import ProtectedRoute from "./ProtectedRoute";
 import { UserAuthContextProvider } from './UserAuthContext';
-import Esports from './pages/Esports';
-import Sports from './pages/Sports';
-import Hackathon from './pages/Hackathon';
+
+import Esports from './pages/Host/Esports';
+import Sports from './pages/Host/Sports';
+import Hackathon from './pages/Host/Hackathon';
 function App() {
   
   return (
@@ -26,9 +27,9 @@ function App() {
             <Route path="/registration" element={<RegistrationForm />} />
             <Route path="/profile" element={<ProfilePage />} />
             <Route path="/map" element={<SimpleMap />} />
-            <Route path="/esport" element={<Esports/>} />
-            <Route path="/sport" element={<Sports/>} />
-            <Route path="/hackathon" element={<Hackathon />} />
+            <Route path="/esportHost" element={<Esports/>} />
+            <Route path="/sportHost" element={<Sports/>} />
+            <Route path="/hackathonHost" element={<Hackathon />} />
           </Routes>
         </BrowserRouter>
       </UserAuthContextProvider>
