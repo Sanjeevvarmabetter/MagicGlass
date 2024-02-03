@@ -2,10 +2,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
-// Your MongoDB endpoint
-const mongoDBEndpoint = 'mongodb+srv://shore:shore@cluster0.uubfvtd.mongodb.net/contactus';;
-
-const ContactForm = () => {
+function UserContactUs() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -15,12 +12,28 @@ const ContactForm = () => {
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
-    console.log(name);
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    try {
+      const response = await axios.post('http://localhost:5000/contactus', formData);
+      console.log(response.data);
+      alert("Contactus successful");
+    } catch (error) {
+      console.error('Contactus failed. Please try again.');
+      alert('Contactus failed. Please try again.');
+    }
+
+    // Optionally, you can reset the form after submission
+    setFormData({
+      name: '',
+      email: '',
+      message: '',
+    });
   };
+
   return (
     <form onSubmit={handleSubmit}>
       <label>
@@ -41,6 +54,6 @@ const ContactForm = () => {
       <button type="submit">Submit</button>
     </form>
   );
-};
+}
 
-export default ContactForm;
+export default UserContactUs;

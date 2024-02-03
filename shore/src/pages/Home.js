@@ -24,6 +24,7 @@ const Home = () => {
                 <CarouselCom />
                 <FeatureCard />
                 <VerticalScroll />
+                <ContactUs />
                 <Link to='/rank'>Rank</Link>
             </div>
         </div>
