@@ -4,7 +4,6 @@ import React, { useState } from 'react';
 
 function UserRegistrationForm() {
   const [formData, setFormData] = useState({
-    profilePic: '',
     username: '',
     email: '',
     country: '',
@@ -35,14 +34,6 @@ function UserRegistrationForm() {
 
   return (
     <form onSubmit={handleSubmit}>
-      <div>
-        <label>Profile Picture:</label>
-        <input
-          type="file"
-          name="profilePic"
-          onChange={handleChange}
-        />
-      </div>
       <div>
         <label>Username:</label>
         <input

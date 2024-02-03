@@ -7,7 +7,6 @@ router.post('/registration', async (req, res) => {
         const { profilepic, username, email, country, address, phone, eventCategory, expertise } = req.body;
 
         const newRegistration = new Registration({
-            profilepic: profilepic,
             username: username,
             email: email,
             country: country,

@@ -1,7 +1,6 @@
 const mongoose = require('mongoose');
 
 const registrationFormSchema = new mongoose.Schema({
-    profilePic: String,
     username: String,
     email: String,
     country: String,
