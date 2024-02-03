@@ -4,7 +4,7 @@ const Registration = require('../models/registrationform');
 
 router.post('/registration', async (req, res) => {
     try {
-        const { profilepic, username, email, country, address, phone, eventCategory, expertise } = req.body;
+        const {username, email, country, address, phone, eventCategory, expertise } = req.body;
 
         const newRegistration = new Registration({
             username: username,
