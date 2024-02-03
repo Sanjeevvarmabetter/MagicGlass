@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import auth from '../../firebase.init';
 import { useCreateUserWithEmailAndPassword} from 'react-firebase-hooks/auth';
-
 import { Link } from 'react-router-dom';
+import '../styles/signup.css'; // Import your CSS file
 
 const CreateUser = () => {
     const [username, setUserName] = useState('');
@@ -25,38 +25,42 @@ const CreateUser = () => {
     }
 
     return (
-        <div className='signup-container' >
+        <div className='signup-container'>
             <div className='form-container'>
+                <h2>Sign Up</h2>
                 <form onSubmit={handleSubmit}>
-                    <input type='text'
-                        className='display-name'
-                        placeholder='@username'
-                        onChange={(e) => setUserName(e.target.value)}
-                    />
-
-                    <input type='text'
-                        className='display-make'
-                        placeholder='Enter FullName'
-                        onChange={(e) => setName(e.target.value)}
-                    />
-
-                    <input type='email'
-                        className='email'
-                        placeholder='Email Address'
-                        onChange={(e) => setEmail(e.target.value)} />
-
-                    <input type='password'
-                        className='password'
-                        placeholder='Password'
-                        onChange={(e) => setPassword(e.target.value)} />
-                    <div className='btn-login'>
-                        <button type='submit' className='btn'>Sign up</button>
+                    <div className='input-field'>
+                        <input 
+                            type='text'
+                            placeholder='@username'
+                            onChange={(e) => setUserName(e.target.value)}
+                        />
                     </div>
+                    <div className='input-field'>
+                        <input 
+                            type='text'
+                            placeholder='Enter Full Name'
+                            onChange={(e) => setName(e.target.value)}
+                        />
+                    </div>
+                    <div className='input-field'>
+                        <input 
+                            type='email'
+                            placeholder='Email Address'
+                            onChange={(e) => setEmail(e.target.value)}
+                        />
+                    </div>
+                    <div className='input-field'>
+                        <input 
+                            type='password'
+                            placeholder='Password'
+                            onChange={(e) => setPassword(e.target.value)}
+                        />
+                    </div>
+                    <button type='submit' className='btn'>Sign Up</button>
                 </form>
-                <div>
-                    Already have an account?
-                    <Link
-                        to='/login'>login</Link>
+                <div className='no-account'>
+                    Already have an account? <Link to='/login' className='link'>Login</Link>
                 </div>
             </div>
         </div>
