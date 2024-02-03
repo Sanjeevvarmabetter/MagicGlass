@@ -4,11 +4,6 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
-<<<<<<< HEAD
-=======
-
->>>>>>> 56ac35ed79d7d949f14377edc1ba9826377d0f33
-
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>

@@ -1,10 +1,9 @@
-<<<<<<< HEAD
 import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import './styles/home.css'
 
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import NavigationBar from './Components/NavBar'; 
+import NavigationBar from './Components/NavBar';
 import CarouselCom from './Components/CarouselCom';
 import ModelCom from './Components/ModelCom';
 import FeatureCard from './Components/FeatureCard';
@@ -17,25 +16,11 @@ const Home = () => {
 
     const handleShow = () => setShowModal(true);
     const handleClose = () => setShowModal(false);
-=======
-import React, { useState } from 'react';
-function Home() {
->>>>>>> 56ac35ed79d7d949f14377edc1ba9826377d0f33
     return (
 
         <div className="container">
-            
-                <div>
-                    <NavigationBar/>
-                    <div className="container mt-4">
-                        {/* Route Configuration */}
-                        <Routes>
-                            <Route path="/login" element={<Login />} />
-                            <Route path="/login" element={<Signup />} />
-                        </Routes>
-                    </div>
-                </div>
-            
+            <NavigationBar />
+
             <header className="mt-5 text-center">
                 <h1>Welcome to Our Website</h1>
                 <p>Explore and Discover Amazing Things</p>
@@ -51,8 +36,3 @@ function Home() {
 };
 
 export default Home;
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 56ac35ed79d7d949f14377edc1ba9826377d0f33
