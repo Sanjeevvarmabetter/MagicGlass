@@ -28,8 +28,10 @@ const Home = () => {
                 <ContactUs />
                 <Link to='/rank'>Rank</Link>
             </div>
-            <SpreadsheetApp />
+            {/* <SpreadsheetApp /> */}
+
             <Link to='/loginHost'>Host Login</Link>
+            <Link to='/map'>maps</Link>
         </div>
     );
 };

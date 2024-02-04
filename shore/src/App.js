@@ -19,6 +19,8 @@ import HackathonData from './pages/Host/Hackathon_view';
 import LoginHost from './pages/Host/HostAuth/HostLogin';
 import SignUpHost from './pages/Host/HostAuth/HostSignup';
 import HostDashBoard from './pages/Host/HostDashBoard';
+
+import UserDash from './pages/UserPages/UserDash';
 function App() {
   
   return (
@@ -28,9 +30,11 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/rank/*" element={<PlayerRanking />} />
+
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<CreateUser />} />
             <Route path="/registration" element={<RegistrationForm />} />
+            <Route path="dashboard" element={<UserDash/>}/>
             <Route path="/profile" element={<ProfilePage />} />
             <Route path="/map" element={<SimpleMap />} />
 
