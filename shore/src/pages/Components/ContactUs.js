@@ -1,4 +1,3 @@
-// Import necessary dependencies
 import React, { useState } from 'react';
 import axios from 'axios';
 
@@ -35,25 +34,68 @@ function UserContactUs() {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} style={formStyle}>
       <label>
         Name:
-        <input type="text" name="name" value={formData.name} onChange={handleChange} />
+        <input type="text" name="name" value={formData.name} onChange={handleChange} style={inputStyle} />
       </label>
       <br />
       <label>
         Email:
-        <input type="email" name="email" value={formData.email} onChange={handleChange} />
+        <input type="email" name="email" value={formData.email} onChange={handleChange} style={inputStyle} />
       </label>
       <br />
       <label>
         Message:
-        <textarea name="message" value={formData.message} onChange={handleChange} />
+        <textarea name="message" value={formData.message} onChange={handleChange} style={textareaStyle} />
       </label>
       <br />
-      <button type="submit">Submit</button>
+      <button type="submit" style={buttonStyle}>Submit</button>
     </form>
   );
 }
+
+const formStyle = {
+  maxWidth: '400px',
+  margin: 'auto',
+  padding: '20px',
+  border: '1px solid #ccc',
+  borderRadius: '20px',
+  boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+};
+
+const inputStyle = {
+  width: '100%',
+  padding: '12px',
+  marginBottom: '20px',
+  borderRadius: '8px',
+  border: '1px solid #ccc',
+  fontSize: '16px',
+};
+
+const textareaStyle = {
+  width: '100%',
+  padding: '12px',
+  marginBottom: '20px',
+  borderRadius: '8px',
+  border: '1px solid #ccc',
+  fontSize: '16px',
+};
+
+const buttonStyle = {
+  backgroundColor: '#007bff',
+  color: '#fff',
+  padding: '12px 20px',
+  border: 'none',
+  borderRadius: '8px',
+  fontSize: '16px',
+  cursor: 'pointer',
+  boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
+  transition: 'background-color 0.3s ease',
+};
+
+const buttonHoverStyle = {
+  backgroundColor: '#0056b3',
+};
 
 export default UserContactUs;
