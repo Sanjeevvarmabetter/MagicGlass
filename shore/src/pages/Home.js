@@ -22,13 +22,14 @@ const Home = () => {
         <div className="containers">
             <NavigationBar />
             <div className="home-con">
-                <CarouselCom />
                 <FeatureCard />
+                <CarouselCom />
+
                 <VerticalScroll />
                 <ContactUs />
                 <Link to='/rank'>Rank</Link>
             </div>
-            <SpreadsheetApp />
+            {/* <SpreadsheetApp /> */}
             <Link to='/loginHost'>Host Login</Link>
         </div>
     );
