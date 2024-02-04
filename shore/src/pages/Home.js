@@ -30,7 +30,7 @@ const Home = () => {
                 <Link to='/rank'>Rank</Link>
             </div>
             {/* <SpreadsheetApp /> */}
-            <Link to='/loginHost'>Host Login</Link>
+            <Link to='/loginHost'>Host Login</Link><br/>
             <Link to='/map'>maps</Link>
         </div>
     );
