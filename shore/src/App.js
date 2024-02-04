@@ -24,37 +24,56 @@ import HostDashBoard from './pages/Host/HostDashBoard';
 
 import UserDash from './pages/UserPages/UserDash';
 function App() {
-  
+
   return (
     <div className="App">
       <UserAuthContextProvider>
         <BrowserRouter>
           <Routes>
+            {/* <Route path="/login" element={<ProtectedRoute> <UserDash /></ProtectedRoute>} >
+              <Route path="/dashboard" element={<UserDash />} />
+              <Route path="/profile" element={<ProfilePage />} />
+
+            </Route> */}
+
+            {/* <Route path="/loginHost" element={<ProtectedRoute> <HostDashBoard /></ProtectedRoute>} >
+              <Route path="/host/dashboard/esportHost" element={<Esports />} />
+              <Route path="/host/dashboard/sportHost" element={<Sports />} />
+              <Route path="/host/dashboard/hackathonHost" element={<Hackathon />} />
+              <Route path="/host/dashboard" element={<HostDashBoard />} />
+            </Route> */}
+            <Route path="/dashboard" element={<UserDash />} />
+            <Route path="/profile" element={<ProfilePage />} />
+            <Route path="/host/dashboard/esportHost" element={<Esports />} />
+            <Route path="/host/dashboard/sportHost" element={<Sports />} />
+            <Route path="/host/dashboard/hackathonHost" element={<Hackathon />} />
+            <Route path="/host/dashboard" element={<HostDashBoard />} />
             <Route path="/" element={<Home />} />
-            <Route path="/rank/*" element={<PlayerRanking />} />
+            <Route path="/rank" element={<PlayerRanking />} />
 
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<CreateUser />} />
             <Route path="/registration" element={<RegistrationForm />} />
-            <Route path="dashboard" element={<UserDash/>}/>
+
+            <Route path="/dashboard" element={<UserDash />} />
             <Route path="/profile" element={<ProfilePage />} />
             <Route path="/map" element={<SimpleMap />} />
 
-            <Route path="/loginHost" element={<LoginHost/>}/>
-            <Route path="/signupHost" element={<SignUpHost/>}/>
-            <Route path="/host/dashboard" element={<HostDashBoard/>}/>
-            
-            <Route path="/esport" element={<EsportData />}/>
+            <Route path="/loginHost" element={<LoginHost />} />
+            <Route path="/signupHost" element={<SignUpHost />} />
+            <Route path="/host/dashboard" element={<HostDashBoard />} />
+
+            <Route path="/esport" element={<EsportData />} />
             <Route path="/sport" element={<SportData />} />
             <Route path="/hackathon" element={<HackathonData />} />
 
-            <Route path="/host/dashboard/esportHost" element={<Esports/>} />
-            <Route path="/host/dashboard/sportHost" element={<Sports/>} />
+            <Route path="/host/dashboard/esportHost" element={<Esports />} />
+            <Route path="/host/dashboard/sportHost" element={<Sports />} />
             <Route path="/host/dashboard/hackathonHost" element={<Hackathon />} />
           </Routes>
         </BrowserRouter>
       </UserAuthContextProvider>
-      
+
     </div>
   );
 }
