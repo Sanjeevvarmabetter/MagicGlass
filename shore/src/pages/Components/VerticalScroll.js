@@ -10,7 +10,7 @@ const VerticallyCenteredScrollableModal = () => {
   return (
     <>
       <Button variant="primary" onClick={handleShow}>
-        Open Modal
+        Register here
       </Button>
 
       <Modal
@@ -19,7 +19,7 @@ const VerticallyCenteredScrollableModal = () => {
         dialogClassName="modal-dialog-centered modal-dialog-scrollable"
       >
         <Modal.Header closeButton>
-          <Modal.Title>Modal Title</Modal.Title>
+          <Modal.Title>Registration Form</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <Registration />
