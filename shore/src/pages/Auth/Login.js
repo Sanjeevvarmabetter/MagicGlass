@@ -120,6 +120,11 @@ const Login = () => {
       </form>
       <p>Don't have an account? <a href="/signup">Sign up here</a></p>
       {error && <p style={{ color: 'red' }}>{error}</p>}
+
+      <br/>
+      <br/>
+      <br/>
+      <a href='/'>Home</a>
     </div>
   );
 };

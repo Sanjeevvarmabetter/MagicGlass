@@ -8,6 +8,7 @@ const App = () => {
     <div>
       <h1>Rankings </h1>
       <GoogleSheetData />
+      <a href='/'>Home</a>
     </div>
   );
 };
