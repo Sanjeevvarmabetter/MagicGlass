@@ -54,7 +54,7 @@ function Esports() {
       <br />
       <button onClick={handleAppendData}>Append Data</button>
       <br></br>
-      
+      <a href='/host/dashboard/'>dashboard</a><br/>
     </div>
   );
 }

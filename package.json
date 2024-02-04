@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "concurrently \"node testserver.js\" \"node excel.js\" \"node conserver.js\" \"node Host.js\" \"node UserLogin.js\" \"node messageserver.js\" "
+    "start": "concurrently \"node testserver.js\" \"node excel.js\" \"node conserver.js\" \"node Host.js\" \"node UserLogin.js\" \"node messageserver.js\" \"node Profile.js\" "
   },
   "keywords": [],
   "author": "",

@@ -1,6 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import CommunityMessageBox from '../features/CommunityMessageBox';
+import Profile from "../features/Profile"
 function UserDash(){
     const navigate = useNavigate();
 
@@ -20,6 +21,7 @@ function UserDash(){
       {/* Logout button */}
       <button onClick={handleLogout}>Logout</button>
       <CommunityMessageBox/>
+      <Profile/>
     </div>
   );
 }

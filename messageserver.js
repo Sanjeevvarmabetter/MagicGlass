@@ -9,7 +9,7 @@ const PORT = process.env.PORT || 5013;
 app.use(cors());
 app.use(express.json());
 
-mongoose.connect('mongodb://localhost:27017/communityMessages', {
+mongoose.connect('mongodb+srv://shore:shore@cluster0.uubfvtd.mongodb.net/communityMessages', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
