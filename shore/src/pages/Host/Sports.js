@@ -1,7 +1,7 @@
 // src/components/Sports.js
 import React, { useState } from 'react';
 import axios from 'axios';
-
+import { BrowserRouter as  Link } from "react-router-dom";
 function Sports() {
   const [Name, setName] = useState('');
   const [Rank, setRank] = useState('');
@@ -54,6 +54,8 @@ function Sports() {
       </label>
       <br />
       <button onClick={handleAppendData}>Append Data</button>
+      <br></br>
+      
     </div>
   );
 }

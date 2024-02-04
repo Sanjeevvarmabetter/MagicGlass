@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import NavigationBar from '../Components/NavBar';
-
+import { BrowserRouter as  Link } from "react-router-dom";
 function Esports() {
   const [Name, setName] = useState('');
   const [Rank, setRank] = useState('');
@@ -53,6 +53,8 @@ function Esports() {
       </label>
       <br />
       <button onClick={handleAppendData}>Append Data</button>
+      <br></br>
+      
     </div>
   );
 }
